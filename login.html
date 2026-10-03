@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Inicia sesión en Kings."
+    >
+
+    <title>Kings | Iniciar sesión</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <a
+            class="logo"
+            href="index.html"
+            aria-label="Kings, inicio"
+        >
+            KINGS<span>★</span>
+        </a>
+
+        <nav aria-label="Navegación principal">
+
+            <ul class="menu">
+                <li>
+                    <a href="index.html" aria-current="page">Inicio</a>
+                </li>
+                <li>
+                    <a href="productos.html">Productos</a>
+                </li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li>
+                    <a href="carrito.html">
+                        Carrito (<span id="contador-carrito">0</span>)
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section
+            class="seccion"
+            aria-labelledby="titulo-login"
+        >
+            <h1 id="titulo-login">
+                Iniciar sesión
+            </h1>
+
+            <p>
+                Ingresa tu correo y contraseña para acceder a tu cuenta.
+            </p>
+
+            <form
+                id="formulario-login"
+                class="formulario"
+                novalidate
+            >
+
+                <div class="campo">
+
+                    <label for="correo">
+                        Correo electrónico *
+                    </label>
+
+                    <input
+                        id="correo"
+                        name="correo"
+                        type="email"
+                        maxlength="100"
+                        autocomplete="email"
+                        required
+                        aria-describedby="ayuda-correo error-correo"
+                    >
+
+                    <small
+                        id="ayuda-correo"
+                        class="ayuda-campo"
+                    >
+                        Usa un correo @duoc.cl,
+                        @profesor.duoc.cl o @gmail.com.
+                    </small>
+
+                    <small
+                        id="error-correo"
+                        class="error-campo"
+                    ></small>
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="contrasena">
+                        Contraseña *
+                    </label>
+
+                    <input
+                        id="contrasena"
+                        name="contrasena"
+                        type="password"
+                        minlength="4"
+                        maxlength="10"
+                        autocomplete="current-password"
+                        required
+                        aria-describedby="ayuda-contrasena error-contrasena"
+                    >
+
+                    <small
+                        id="ayuda-contrasena"
+                        class="ayuda-campo"
+                    >
+                        Debe contener entre 4 y 10 caracteres.
+                    </small>
+
+                    <small
+                        id="error-contrasena"
+                        class="error-campo"
+                    ></small>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="boton boton-producto"
+                >
+                    Iniciar sesión
+                </button>
+
+                <p
+                    id="resultado-login"
+                    role="status"
+                    aria-live="polite"
+                    aria-atomic="true"
+                ></p>
+
+                <p>
+                    ¿No tienes una cuenta?
+
+                    <a href="registro.html">
+                        Regístrate aquí
+                    </a>.
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer class="pie">
+
+        <p class="marca-footer">
+            KINGS
+        </p>
+
+        <p>
+            Tienda online de jockeys.
+        </p>
+
+        <p>
+            © 2026 Kings.
+        </p>
+
+    </footer>
+    
+    <script src="js/carrito.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/autenticaciones.js"></script>
+
+</body>
+</html>

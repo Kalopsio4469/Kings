@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>
+        Kings | Detalle de orden
+    </title>
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css"
+    >
+</head>
+
+<body class="admin-body">
+    <div class="admin-contenedor">
+        <aside class="admin-menu">
+            <a
+                href="index.html"
+                class="admin-logo"
+            >
+                KINGS<span>★</span>
+            </a>
+
+            <nav>
+                <ul class="admin-navegacion">
+
+                    <li>
+                        <a href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="productos.html">
+                            Productos
+                        </a>
+                    </li>
+
+                    <li class="solo-administrador">
+                        <a href="usuarios.html">
+                            Usuarios
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="ordenes.html"
+                            aria-current="page"
+                        >
+                            Órdenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html">
+                            Ver tienda
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button
+                id="boton-cerrar-sesion"
+                class="boton boton-cerrar-sesion"
+                type="button"
+            >
+                Cerrar sesión
+            </button>
+        </aside>
+
+        <main class="admin-principal">
+            <header class="admin-encabezado">
+                <div>
+                    <p class="etiqueta">
+                        ADMINISTRACIÓN
+                    </p>
+                    <h1>
+                        Detalle de orden
+                    </h1>
+                    <p id="numero-orden">
+                        -
+                    </p>
+                </div>
+
+                <div class="admin-usuario">
+                    <strong id="nombre-usuario">
+                        Usuario
+                    </strong>
+                    <span id="rol-usuario">
+                        -
+                    </span>
+                </div>
+            </header>
+
+            <p
+                id="mensaje-detalle-orden"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+            <div
+                id="contenido-detalle-orden"
+                class="detalle-orden"
+            >
+                <section class="admin-tarjeta">
+                    <h2>
+                        Cliente
+                    </h2>
+                    <p>
+                        <strong>
+                            Nombre:
+                        </strong>
+                        <span id="orden-cliente">
+                            -
+                        </span>
+                    </p>
+
+                    <p>
+                        <strong>
+                            RUN:
+                        </strong>
+                        <span id="orden-run">
+                            -
+                        </span>
+                    </p>
+
+                    <p>
+                        <strong>
+                            Correo:
+                        </strong>
+                        <span id="orden-correo">
+                            -
+                        </span>
+                    </p>
+
+                    <p>
+                        <strong>
+                            Fecha:
+                        </strong>
+                        <span id="orden-fecha">
+                            -
+                        </span>
+                    </p>
+
+                    <p>
+                        <strong>
+                            Estado:
+                        </strong>
+                        <span id="orden-estado">
+                            -
+                        </span>
+                    </p>
+
+                </section>
+
+                <section class="admin-tarjeta">
+                    <h2>
+                        Productos
+                    </h2>
+                    <div class="admin-tabla-responsive">
+                        <table class="admin-tabla">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Producto
+                                    </th>
+                                    <th>
+                                        Precio
+                                    </th>
+                                    <th>
+                                        Cantidad
+                                    </th>
+                                    <th>
+                                        Subtotal
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="productos-detalle-orden">
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="total-detalle-orden">
+                        Total:
+                        <strong id="total-detalle-orden">
+                            $0
+                        </strong>
+                    </p>
+                </section>
+
+                <div>
+                    <a
+                        href="ordenes.html"
+                        class="boton"
+                    >
+                        Volver a órdenes
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/ordenes.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

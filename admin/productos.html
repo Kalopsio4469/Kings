@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Kings | Administrar productos</title>
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css"
+    >
+
+</head>
+
+<body class="admin-body">
+    <div class="admin-contenedor">
+        <aside class="admin-menu">
+            <a
+                href="index.html"
+                class="admin-logo"
+            >
+                KINGS<span>★</span>
+            </a>
+
+
+            <nav>
+                <ul class="admin-navegacion">
+                    <li>
+                        <a href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="productos.html"
+                            aria-current="page"
+                        >
+                            Productos
+                        </a>
+                    </li>
+                    <li class="solo-administrador">
+                        <a href="usuarios.html">
+                            Usuarios
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="ordenes.html">
+                            Órdenes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html">
+                            Ver tienda
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button
+                id="boton-cerrar-sesion"
+                class="boton boton-cerrar-sesion"
+                type="button"
+            >
+                Cerrar sesión
+            </button>
+
+        </aside>
+        <main class="admin-principal">
+
+            <header class="admin-encabezado">
+
+                <div>
+                    <p class="etiqueta">
+                        ADMINISTRACIÓN
+                    </p>
+                    <h1>
+                        Productos
+                    </h1>
+                    <p>
+                        Administra el catálogo
+                        disponible en Kings.
+                    </p>
+                </div>
+
+                <div class="admin-usuario">
+                    <strong id="nombre-usuario">
+                        Usuario
+                    </strong>
+                    <span id="rol-usuario">
+                        -
+                    </span>
+                </div>
+
+            </header>
+            <section class="admin-barra-acciones">
+                <div>
+                    <h2>
+                        Catálogo
+                    </h2>
+                    <p id="cantidad-productos">
+                        0 productos
+                    </p>
+                </div>
+                <a
+                    href="producto-formulario.html"
+                    class="
+                        boton
+                        solo-administrador
+                    "
+                    id="boton-nuevo-producto"
+                >
+                    + Nuevo producto
+                </a>
+            </section>
+
+            <p
+                id="mensaje-admin-productos"
+                class="mensaje-carrito"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+            <section
+                class="admin-tabla-contenedor"
+                aria-labelledby="titulo-tabla-productos"
+            >
+                <h2
+                    id="titulo-tabla-productos"
+                    class="visualmente-oculto"
+                >
+                    Listado de productos
+                </h2>
+                <div class="admin-tabla-responsive">
+                    <table class="admin-tabla">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Imagen
+                                </th>
+                                <th>
+                                    Código
+                                </th>
+                                <th>
+                                    Producto
+                                </th>
+                                <th>
+                                    Categoría
+                                </th>
+                                <th>
+                                    Precio
+                                </th>
+                                <th>
+                                    Stock
+                                </th>
+                                <th>
+                                    Estado
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-productos-admin">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/datos.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

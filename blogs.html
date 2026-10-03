@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consejos y novedades de Kings.">
+
+    <title>Kings | Blog</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <a class="logo" href="index.html" aria-label="Kings, inicio">
+            KINGS<span>★</span>
+        </a>
+
+        <nav aria-label="Navegación principal">
+            <ul class="menu">
+                <li>
+                    <a href="index.html" aria-current="page">Inicio</a>
+                </li>
+                <li>
+                    <a href="productos.html">Productos</a>
+                </li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li>
+                    <a href="carrito.html">
+                        Carrito (<span id="contador-carrito">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="seccion" aria-labelledby="titulo-blog">
+            <h1 id="titulo-blog">El blog de Kings</h1>
+            <p>Ideas para elegir, combinar y cuidar tu próxima corona.</p>
+
+            <div class="lista-productos">
+                <article class="tarjeta-producto">
+                    <img
+                        class="imagen-producto"
+                        src="img/jockey-negro.jpg"
+                        alt="Jockey Kings Classic Negro"
+                        loading="lazy"
+                    >
+
+                    <div class="contenido-producto">
+                        <h2>¿Qué tipo de jockey va contigo?</h2>
+                        <p>
+                            Conoce las diferencias entre snapback,
+                            trucker y dad hat.
+                        </p>
+                        <a class="boton" href="blog-detalle.html?id=tipos">
+                            Leer artículo
+                        </a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-producto">
+                    <img
+                        class="imagen-producto"
+                        src="img/jockey-beige.jpg"
+                        alt="Jockey Kings Dad Hat Beige"
+                        loading="lazy"
+                    >
+
+                    <div class="contenido-producto">
+                        <h2>Cómo cuidar tu jockey</h2>
+                        <p>
+                            Consejos para conservar su forma
+                            y mantenerlo limpio.
+                        </p>
+                        <a class="boton" href="blog-detalle.html?id=cuidados">
+                            Leer artículo
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p class="marca-footer">KINGS</p>
+        <p>Tienda online de jockeys.</p>
+        <p>© 2026 Kings. Proyecto académico.</p>
+    </footer>
+
+    <script src="js/carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Kings | Administración</title>
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css"
+    >
+</head>
+
+<body class="admin-body">
+    <div class="admin-contenedor">
+        <aside class="admin-menu">
+            <a
+                href="index.html"
+                class="admin-logo"
+            >
+                KINGS<span>★</span>
+            </a>
+
+            <nav>
+                <ul class="admin-navegacion">
+                    <li>
+                        <a
+                            href="index.html"
+                            aria-current="page"
+                        >
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="productos.html">
+                            Productos
+                        </a>
+                    </li>
+
+                    <li
+                        class="solo-administrador"
+                    >
+                        <a href="usuarios.html">
+                            Usuarios
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="ordenes.html">
+                            Órdenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html">
+                            Ver tienda
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button
+                id="boton-cerrar-sesion"
+                class="boton boton-cerrar-sesion"
+                type="button"
+            >
+                Cerrar sesión
+            </button>
+
+        </aside>
+
+        <main class="admin-principal">
+            <header class="admin-encabezado">
+                <div>
+                    <p class="etiqueta">
+                        ADMINISTRACIÓN
+                    </p>
+                    <h1>
+                        Panel Kings
+                    </h1>
+                </div>
+
+                <div class="admin-usuario">
+                    <strong id="nombre-usuario">
+                        Usuario
+                    </strong>
+                    <span id="rol-usuario">
+                        -
+                    </span>
+                </div>
+            </header>
+
+            <section class="admin-bienvenida">
+                <h2>
+                    Bienvenido,
+                    <span id="nombre-bienvenida">
+                        usuario
+                    </span>
+                </h2>
+                <p>
+                    Desde aquí puedes administrar
+                    la tienda Kings.
+                </p>
+            </section>
+
+            <section>
+                <h2>
+                    Gestión
+                </h2>
+
+                <div class="admin-tarjetas">
+                    <article class="admin-tarjeta">
+                        <h3>
+                            Productos
+                        </h3>
+                        <p>
+                            Administra los productos
+                            disponibles en la tienda.
+                        </p>
+                        <a
+                            class="boton"
+                            href="productos.html"
+                        >
+                            Administrar productos
+                        </a>
+                    </article>
+
+                    <article
+                        class="
+                            admin-tarjeta
+                            solo-administrador
+                        "
+                    >
+                        <h3>
+                            Usuarios
+                        </h3>
+                        <p>
+                            Crea, revisa y administra
+                            los usuarios del sistema.
+                        </p>
+                        <a
+                            class="boton"
+                            href="usuarios.html"
+                        >
+                            Administrar usuarios
+                        </a>
+                    </article>
+
+                    <article class="admin-tarjeta">
+                        <h3>
+                            Órdenes
+                        </h3>
+                        <p>
+                            Revisa las órdenes
+                            realizadas en la tienda.
+                        </p>
+
+                        <a
+                            class="boton"
+                            href="ordenes.html"
+                        >
+                            Ver órdenes
+                        </a>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Crea tu cuenta en Kings."
+    >
+    <title>Kings | Registro</title>
+    
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <a class="logo" href="index.html" aria-label="Kings, inicio">
+            KINGS<span>★</span>
+        </a>
+
+        <nav aria-label="Navegación principal">
+            <ul class="menu">
+                <li>
+                    <a href="index.html" aria-current="page">Inicio</a>
+                </li>
+                <li>
+                    <a href="productos.html">Productos</a>
+                </li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li>
+                    <a href="carrito.html">
+                        Carrito (<span id="contador-carrito">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="seccion" aria-labelledby="titulo-registro">
+            <h1 id="titulo-registro">Crear cuenta</h1>
+
+            <p>
+                Completa tus datos para registrarte en Kings.
+                Los campos con * son obligatorios.
+            </p>
+
+            <form
+                id="formulario-registro"
+                class="formulario"
+                novalidate
+            >
+                <div class="campo">
+                    <label for="run">RUN *</label>
+
+                    <input
+                        id="run"
+                        name="run"
+                        type="text"
+                        minlength="7"
+                        maxlength="9"
+                        placeholder="19011022K"
+                        autocomplete="off"
+                        required
+                        aria-describedby="ayuda-run error-run"
+                    >
+
+                    <small id="ayuda-run" class="ayuda-campo">
+                        Sin puntos ni guion.
+                    </small>
+
+                    <small
+                        id="error-run"
+                        class="error-campo"
+                    ></small>
+                </div>
+
+                <div class="campo">
+                    <label for="nombre">Nombre *</label>
+
+                    <input
+                        id="nombre"
+                        name="nombre"
+                        type="text"
+                        maxlength="50"
+                        autocomplete="given-name"
+                        required
+                        aria-describedby="error-nombre"
+                    >
+
+                    <small
+                        id="error-nombre"
+                        class="error-campo"
+                    ></small>
+                </div>
+
+                <div class="campo">
+                    <label for="apellidos">Apellidos *</label>
+
+                    <input
+                        id="apellidos"
+                        name="apellidos"
+                        type="text"
+                        maxlength="100"
+                        autocomplete="family-name"
+                        required
+                        aria-describedby="error-apellidos"
+                    >
+
+                    <small
+                        id="error-apellidos"
+                        class="error-campo"
+                    ></small>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico *</label>
+
+                    <input
+                        id="correo"
+                        name="correo"
+                        type="email"
+                        maxlength="100"
+                        autocomplete="email"
+                        required
+                        aria-describedby="ayuda-correo error-correo"
+                    >
+
+                    <small id="ayuda-correo" class="ayuda-campo">
+                        Se permiten correos @duoc.cl,
+                        @profesor.duoc.cl y @gmail.com.
+                    </small>
+
+                    <small
+                        id="error-correo"
+                        class="error-campo"
+                    ></small>
+                </div>
+
+                <div class="campo">
+                    <label for="fecha-nacimiento">
+                        Fecha de nacimiento
+                    </label>
+
+                    <input
+                        id="fecha-nacimiento"
+                        name="fechaNacimiento"
+                        type="date"
+                        autocomplete="bday"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="contrasena">Contraseña *</label>
+
+                    <input
+                        id="contrasena"
+                        name="contrasena"
+                        type="password"
+                        minlength="4"
+                        maxlength="10"
+                        autocomplete="new-password"
+                        required
+                        aria-describedby="ayuda-contrasena error-contrasena"
+                    >
+
+                    <small id="ayuda-contrasena" class="ayuda-campo">
+                        Debe tener entre 4 y 10 caracteres.
+                    </small>
+
+                    <small
+                        id="error-contrasena"
+                        class="error-campo"
+                    ></small>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmar-contrasena">
+                        Confirmar contraseña *
+                    </label>
+
+                    <input
+                        id="confirmar-contrasena"
+                        name="confirmarContrasena"
+                        type="password"
+                        minlength="4"
+                        maxlength="10"
+                        autocomplete="new-password"
+                        required
+                        aria-describedby="error-confirmar-contrasena"
+                    >
+
+                    <small
+                        id="error-confirmar-contrasena"
+                        class="error-campo"
+                    ></small>
+                </div>
+
+                <div class="campo">
+                    <label for="region">Región *</label>
+
+                    <select
+                        id="region"
+                        name="region"
+                        required
+                        aria-describedby="error-region"
+                    >
+                        <option value="">
+                            Selecciona una región
+                        </option>
+                    </select>
+
+                    <small
+                        id="error-region"
+                        class="error-campo"
+                    ></small>
+                </div>
+
+                <div class="campo">
+                    <label for="comuna">Comuna *</label>
+
+                    <select
+                        id="comuna"
+                        name="comuna"
+                        required
+                        disabled
+                        aria-describedby="error-comuna"
+                    >
+                        <option value="">
+                            Primero selecciona una región
+                        </option>
+                    </select>
+
+                    <small
+                        id="error-comuna"
+                        class="error-campo"
+                    ></small>
+                </div>
+
+                <div class="campo">
+                    <label for="direccion">Dirección *</label>
+
+                    <input
+                        id="direccion"
+                        name="direccion"
+                        type="text"
+                        maxlength="300"
+                        autocomplete="street-address"
+                        required
+                        aria-describedby="error-direccion"
+                    >
+
+                    <small
+                        id="error-direccion"
+                        class="error-campo"
+                    ></small>
+                </div>
+
+                <button
+                    class="boton boton-producto"
+                    type="submit"
+                >
+                    Crear cuenta
+                </button>
+
+                <p
+                    id="resultado-registro"
+                    role="status"
+                    aria-live="polite"
+                    aria-atomic="true"
+                ></p>
+
+                <p>
+                    ¿Ya tienes una cuenta?
+                    <a href="login.html">Inicia sesión</a>.
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p class="marca-footer">KINGS</p>
+        <p>Tienda online de jockeys.</p>
+        <p>© 2026 Kings.</p>
+    </footer>
+
+    <script src="js/carrito.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/regions.js"></script>
+    <script src="js/autenticaciones.js"></script>
+</body>
+</html>

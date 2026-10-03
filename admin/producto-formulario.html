@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Kings | Producto</title>
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css"
+    >
+</head>
+
+<body class="admin-body">
+    <div class="admin-contenedor">
+        <aside class="admin-menu">
+            <a
+                href="index.html"
+                class="admin-logo"
+            >
+                KINGS<span>★</span>
+            </a>
+
+            <nav>
+                <ul class="admin-navegacion">
+                    <li>
+                        <a href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="productos.html"
+                            aria-current="page"
+                        >
+                            Productos
+                        </a>
+                    </li>
+
+                    <li class="solo-administrador">
+                        <a href="usuarios.html">
+                            Usuarios
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="ordenes.html">
+                            Órdenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html">
+                            Ver tienda
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button
+                id="boton-cerrar-sesion"
+                class="boton boton-cerrar-sesion"
+                type="button"
+            >
+                Cerrar sesión
+            </button>
+        </aside>
+
+        <main class="admin-principal">
+            <header class="admin-encabezado">
+                <div>
+                    <p class="etiqueta">
+                        ADMINISTRACIÓN
+                    </p>
+                    <h1 id="titulo-formulario-producto">
+                        Nuevo producto
+                    </h1>
+                    <p id="descripcion-formulario-producto">
+                        Completa los datos para agregar
+                        un producto al catálogo.
+                    </p>
+                </div>
+
+                <div class="admin-usuario">
+                    <strong id="nombre-usuario">
+                        Usuario
+                    </strong>
+                    <span id="rol-usuario">
+                        -
+                    </span>
+                </div>
+            </header>
+
+            <section class="admin-formulario-contenedor">
+
+                <form
+                    id="formulario-producto"
+                    class="formulario admin-formulario"
+                    novalidate
+                >
+                    <div class="campo">
+                        <label for="codigo-producto">
+                            Código producto *
+                        </label>
+                        <input
+                            id="codigo-producto"
+                            name="codigo"
+                            type="text"
+                            minlength="3"
+                            required
+                            placeholder="KIN004"
+                            aria-describedby="
+                                ayuda-codigo-producto
+                                error-codigo-producto
+                            "
+                        >
+                        <small
+                            id="ayuda-codigo-producto"
+                            class="ayuda-campo"
+                        >
+                            Mínimo 3 caracteres.
+                        </small>
+                        <small
+                            id="error-codigo-producto"
+                            class="error-campo"
+                        ></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="nombre-producto">
+                            Nombre *
+                        </label>
+                        <input
+                            id="nombre-producto"
+                            name="nombre"
+                            type="text"
+                            maxlength="100"
+                            required
+                            aria-describedby="
+                                error-nombre-producto
+                            "
+                        >
+                        <small
+                            id="error-nombre-producto"
+                            class="error-campo"
+                        ></small>
+
+                    </div>
+
+                    <div class="campo campo-completo">
+                        <label for="descripcion-producto">
+                            Descripción
+                        </label>
+                        <textarea
+                            id="descripcion-producto"
+                            name="descripcion"
+                            maxlength="500"
+                            rows="5"
+                            aria-describedby="
+                                ayuda-descripcion-producto
+                                error-descripcion-producto
+                            "
+                        ></textarea>
+                        <small
+                            id="ayuda-descripcion-producto"
+                            class="ayuda-campo"
+                        >
+                            Campo opcional.
+                            Máximo 500 caracteres.
+                        </small>
+                        <small
+                            id="error-descripcion-producto"
+                            class="error-campo"
+                        ></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="precio-producto">
+                            Precio *
+                        </label>
+                        <input
+                            id="precio-producto"
+                            name="precio"
+                            type="number"
+                            min="0"
+                            step="0.01"
+                            required
+                            placeholder="14990"
+                            aria-describedby="
+                                ayuda-precio-producto
+                                error-precio-producto
+                            "
+                        >
+                        <small
+                            id="ayuda-precio-producto"
+                            class="ayuda-campo"
+                        >
+                            Puede ser 0 para un producto FREE.
+                        </small>
+                        <small
+                            id="error-precio-producto"
+                            class="error-campo"
+                        ></small>
+
+                    </div>
+
+                    <div class="campo">
+                        <label for="categoria-producto">
+                            Categoría *
+                        </label>
+                        <select
+                            id="categoria-producto"
+                            name="categoria"
+                            required
+                            aria-describedby="
+                                error-categoria-producto
+                            "
+                        >
+                            <option value="">
+                                Selecciona una categoría
+                            </option>
+                            <option value="Snapback">
+                                Snapback
+                            </option>
+                            <option value="Trucker">
+                                Trucker
+                            </option>
+                            <option value="Dad Hat">
+                                Dad Hat
+                            </option>
+                            <option value="Visera Curva">
+                                Visera Curva
+                            </option>
+                            <option value="Deportivo">
+                                Deportivo
+                            </option>
+                            <option value="Otro">
+                                Otro
+                            </option>
+
+                        </select>
+                        <small
+                            id="error-categoria-producto"
+                            class="error-campo"
+                        ></small>
+
+                    </div>
+
+                    <div class="campo">
+                        <label for="stock-producto">
+                            Stock *
+                        </label>
+                        <input
+                            id="stock-producto"
+                            name="stock"
+                            type="number"
+                            min="0"
+                            step="1"
+                            required
+                            placeholder="10"
+                            aria-describedby="
+                                error-stock-producto
+                            "
+                        >
+                        <small
+                            id="error-stock-producto"
+                            class="error-campo"
+                        ></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="stock-critico-producto">
+                            Stock crítico
+                        </label>
+                        <input
+                            id="stock-critico-producto"
+                            name="stockCritico"
+                            type="number"
+                            min="0"
+                            step="1"
+                            placeholder="2"
+                            aria-describedby="
+                                ayuda-stock-critico-producto
+                                error-stock-critico-producto
+                            "
+                        >
+                        <small
+                            id="ayuda-stock-critico-producto"
+                            class="ayuda-campo"
+                        >
+                            Campo opcional.
+                        </small>
+                        <small
+                            id="error-stock-critico-producto"
+                            class="error-campo"
+                        ></small>
+                    </div>
+
+                    <div class="campo campo-completo">
+                        <label for="imagen-producto">
+                            Imagen
+                        </label>
+                        <input
+                            id="imagen-producto"
+                            name="imagen"
+                            type="text"
+                            placeholder="img/jockey-negro.jpg"
+                            aria-describedby="
+                                ayuda-imagen-producto
+                            "
+                        >
+                        <small
+                            id="ayuda-imagen-producto"
+                            class="ayuda-campo"
+                        >
+                            Ejemplo:
+                            img/jockey-negro.jpg
+                        </small>
+                    </div>
+
+                    <div class="campo-completo">
+                        <p>
+                            Vista previa
+                        </p>
+                        <div class="producto-preview">
+                            <img
+                                id="preview-imagen-producto"
+                                src="../img/jockey-negro.jpg"
+                                alt="Vista previa del producto"
+                            >
+                        </div>
+                    </div>
+
+                    <p
+                        id="resultado-producto"
+                        class="campo-completo"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                    <div class="admin-formulario-botones campo-completo">
+                        <button
+                            type="submit"
+                            class="boton"
+                            id="boton-guardar-producto"
+                        >
+                            Guardar producto
+                        </button>
+
+                        <a
+                            href="productos.html"
+                            class="boton-admin-secundario"
+                        >
+                            Cancelar
+                        </a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="../js/validaciones.js"></script>
+    <script src="../js/datos.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

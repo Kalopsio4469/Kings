@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Kings | Usuario</title>
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css"
+    >
+</head>
+<body class="admin-body">
+    <div class="admin-contenedor">
+        <aside class="admin-menu">
+            <a
+                href="index.html"
+                class="admin-logo"
+            >
+                KINGS<span>★</span>
+            </a>
+            <nav>
+
+                <ul class="admin-navegacion">
+                    <li>
+                        <a href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="productos.html">
+                            Productos
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="usuarios.html"
+                            aria-current="page"
+                        >
+                            Usuarios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ordenes.html">
+                            Órdenes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html">
+                            Ver tienda
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button
+                id="boton-cerrar-sesion"
+                class="boton boton-cerrar-sesion"
+                type="button"
+            >
+                Cerrar sesión
+            </button>
+        </aside>
+
+        <main class="admin-principal">
+            <header class="admin-encabezado">
+                <div>
+                    <p class="etiqueta">
+                        ADMINISTRACIÓN
+                    </p>
+                    <h1 id="titulo-formulario-usuario">
+                        Nuevo usuario
+                    </h1>
+                    <p id="descripcion-formulario-usuario">
+                        Completa los datos del nuevo usuario.
+                    </p>
+                </div>
+
+                <div class="admin-usuario">
+                    <strong id="nombre-usuario">
+                        Usuario
+                    </strong>
+                    <span id="rol-usuario">
+                        -
+                    </span>
+                </div>
+            </header>
+
+            <section class="admin-formulario-contenedor">
+                <form
+                    id="formulario-usuario-admin"
+                    class="formulario admin-formulario"
+                    novalidate
+                >
+                    <div class="campo">
+                        <label for="run">
+                            RUN *
+                        </label>
+                        <input
+                            id="run"
+                            name="run"
+                            type="text"
+                            minlength="7"
+                            maxlength="9"
+                            placeholder="19011022K"
+                            required
+                            aria-describedby="
+                                ayuda-run
+                                error-run
+                            "
+                        >
+                        <small
+                            id="ayuda-run"
+                            class="ayuda-campo"
+                        >
+                            Sin puntos ni guion.
+                        </small>
+                        <small
+                            id="error-run"
+                            class="error-campo"
+                        ></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="tipo-usuario">
+                            Tipo de usuario *
+                        </label>
+                        <select
+                            id="tipo-usuario"
+                            name="tipoUsuario"
+                            required
+                            aria-describedby="
+                                error-tipo-usuario
+                            "
+                        >
+                            <option value="">
+                                Selecciona un rol
+                            </option>
+                            <option value="Administrador">
+                                Administrador
+                            </option>
+                            <option value="Cliente">
+                                Cliente
+                            </option>
+                            <option value="Vendedor">
+                                Vendedor
+                            </option>
+                        </select>
+                        <small
+                            id="error-tipo-usuario"
+                            class="error-campo"
+                        ></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="nombre">
+                            Nombre *
+                        </label>
+                        <input
+                            id="nombre"
+                            name="nombre"
+                            type="text"
+                            maxlength="50"
+                            required
+                            aria-describedby="
+                                error-nombre
+                            "
+                        >
+                        <small
+                            id="error-nombre"
+                            class="error-campo"
+                        ></small>
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="apellidos">
+                            Apellidos *
+                        </label>
+                        <input
+                            id="apellidos"
+                            name="apellidos"
+                            type="text"
+                            maxlength="100"
+                            required
+                            aria-describedby="
+                                error-apellidos
+                            "
+                        >
+                        <small
+                            id="error-apellidos"
+                            class="error-campo"
+                        ></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">
+                            Correo electrónico *
+                        </label>
+                        <input
+                            id="correo"
+                            name="correo"
+                            type="email"
+                            maxlength="100"
+                            required
+                            aria-describedby="
+                                ayuda-correo
+                                error-correo
+                            "
+                        >
+                        <small
+                            id="ayuda-correo"
+                            class="ayuda-campo"
+                        >
+                            @duoc.cl,
+                            @profesor.duoc.cl
+                            o @gmail.com
+                        </small>
+
+                        <small
+                            id="error-correo"
+                            class="error-campo"
+                        ></small>
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="fecha-nacimiento">
+                            Fecha de nacimiento
+                        </label>
+                        <input
+                            id="fecha-nacimiento"
+                            name="fechaNacimiento"
+                            type="date"
+                            aria-describedby="
+                                error-fecha-nacimiento
+                            "
+                        >
+                        <small
+                            id="error-fecha-nacimiento"
+                            class="error-campo"
+                        ></small>
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="contrasena">
+                            Contraseña
+                            <span id="marca-password">
+                                *
+                            </span>
+                        </label>
+                        <input
+                            id="contrasena"
+                            name="contrasena"
+                            type="password"
+                            minlength="4"
+                            maxlength="10"
+                            autocomplete="new-password"
+                            aria-describedby="
+                                ayuda-contrasena
+                                error-contrasena
+                            "
+                        >
+                        <small
+                            id="ayuda-contrasena"
+                            class="ayuda-campo"
+                        >
+                            Entre 4 y 10 caracteres.
+                        </small>
+                        <small
+                            id="error-contrasena"
+                            class="error-campo"
+                        ></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="confirmar-contrasena">
+                            Confirmar contraseña
+                            <span id="marca-confirmacion">
+                                *
+                            </span>
+                        </label>
+                        <input
+                            id="confirmar-contrasena"
+                            name="confirmarContrasena"
+                            type="password"
+                            minlength="4"
+                            maxlength="10"
+                            autocomplete="new-password"
+                            aria-describedby="
+                                error-confirmar-contrasena
+                            "
+                        >
+                        <small
+                            id="error-confirmar-contrasena"
+                            class="error-campo"
+                        ></small>
+
+                    </div>
+
+                    <div class="campo">
+                        <label for="region">
+                            Región *
+                        </label>
+                        <select
+                            id="region"
+                            name="region"
+                            required
+                            aria-describedby="
+                                error-region
+                            "
+                        >
+                            <option value="">
+                                Selecciona una región
+                            </option>
+                        </select>
+                        <small
+                            id="error-region"
+                            class="error-campo"
+                        ></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="comuna">
+                            Comuna *
+                        </label>
+                        <select
+                            id="comuna"
+                            name="comuna"
+                            required
+                            disabled
+                            aria-describedby="
+                                error-comuna
+                            "
+                        >
+                            <option value="">
+                                Primero selecciona una región
+                            </option>
+                        </select>
+                        <small
+                            id="error-comuna"
+                            class="error-campo"
+                        ></small>
+                    </div>
+
+                    <div class="campo campo-completo">
+                        <label for="direccion">
+                            Dirección *
+                        </label>
+                        <input
+                            id="direccion"
+                            name="direccion"
+                            type="text"
+                            maxlength="300"
+                            required
+                            aria-describedby="
+                                error-direccion
+                            "
+                        >
+                        <small
+                            id="error-direccion"
+                            class="error-campo"
+                        ></small>
+                    </div>
+
+                    <p
+                        id="resultado-usuario-admin"
+                        class="campo-completo"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                    <div
+                        class="
+                            admin-formulario-botones
+                            campo-completo
+                        "
+                    >
+                        <button
+                            id="boton-guardar-usuario"
+                            type="submit"
+                            class="boton"
+                        >
+                            Guardar usuario
+                        </button>
+                        <a
+                            href="usuarios.html"
+                            class="boton-admin-secundario"
+                        >
+                            Cancelar
+                        </a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/validaciones.js"></script>
+    <script src="../js/regions.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

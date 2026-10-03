@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Kings | Órdenes
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css"
+    >
+</head>
+
+<body class="admin-body">
+    <div class="admin-contenedor">
+        <aside class="admin-menu">
+            <a
+                href="index.html"
+                class="admin-logo"
+            >
+                KINGS<span>★</span>
+            </a>
+
+            <nav>
+                <ul class="admin-navegacion">
+                    <li>
+                        <a href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="productos.html">
+                            Productos
+                        </a>
+                    </li>
+
+                    <li class="solo-administrador">
+                        <a href="usuarios.html">
+                            Usuarios
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="ordenes.html"
+                            aria-current="page"
+                        >
+                            Órdenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html">
+                            Ver tienda
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button
+                id="boton-cerrar-sesion"
+                class="boton boton-cerrar-sesion"
+                type="button"
+            >
+                Cerrar sesión
+            </button>
+        </aside>
+
+        <main class="admin-principal">
+            <header class="admin-encabezado">
+                <div>
+                    <p class="etiqueta">
+                        ADMINISTRACIÓN
+                    </p>
+                    <h1>
+                        Órdenes
+                    </h1>
+                    <p>
+                        Revisa las compras
+                        realizadas en Kings.
+                    </p>
+                </div>
+
+                <div class="admin-usuario">
+                    <strong id="nombre-usuario">
+                        Usuario
+                    </strong>
+                    <span id="rol-usuario">
+                        -
+                    </span>
+                </div>
+            </header>
+
+            <section class="admin-barra-acciones">
+                <div>
+                    <h2>
+                        Órdenes registradas
+                    </h2>
+                    <p id="cantidad-ordenes">
+                        0 órdenes
+                    </p>
+                </div>
+            </section>
+
+            <section
+                class="admin-tabla-contenedor"
+            >
+                <div class="admin-tabla-responsive">
+                    <table class="admin-tabla">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Orden
+                                </th>
+                                <th>
+                                    Fecha
+                                </th>
+                                <th>
+                                    Cliente
+                                </th>
+                                <th>
+                                    Productos
+                                </th>
+                                <th>
+                                    Total
+                                </th>
+                                <th>
+                                    Estado
+                                </th>
+                                <th>
+                                    Acción
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-ordenes-admin">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/ordenes.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

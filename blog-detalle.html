@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artículos del blog de Kings.">
+
+    <title>Kings | Artículo</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <a class="logo" href="index.html" aria-label="Kings, inicio">
+            KINGS<span>★</span>
+        </a>
+
+        <nav aria-label="Navegación principal">
+            <ul class="menu">
+                <li>
+                    <a href="index.html" aria-current="page">Inicio</a>
+                </li>
+                <li>
+                    <a href="productos.html">Productos</a>
+                </li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li>
+                    <a href="carrito.html">
+                        Carrito (<span id="contador-carrito">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="seccion" aria-label="Artículo del blog">
+            <a href="blogs.html">← Volver al blog</a>
+            <article id="articulo-blog" class="articulo-blog"></article>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p class="marca-footer">KINGS</p>
+        <p>Tienda online de jockeys.</p>
+        <p>© 2026 Kings. Proyecto académico.</p>
+    </footer>
+
+    <script src="js/carrito.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>
